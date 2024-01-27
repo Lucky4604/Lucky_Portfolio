@@ -29,12 +29,14 @@ const Navbar = () => {
 
         <div className="flex flex-row gap-5">
       {Socials.map((social) => (
-        <Link   href={social.name === 'Linkedin' ? 'https://www.linkedin.com/in/lucky-govind-rao-00240a1b6//' : social.name === 'Github' ? 'https://github.com/Lucky4604/' : '#'}>
+        <Link 
+        key={social.name}
+        href={social.name === 'Linkedin' ? 'https://www.linkedin.com/in/lucky-govind-rao-00240a1b6//' : social.name === 'Github' ? 'https://github.com/Lucky4604/' : '#'}>
           
             <Image
               src={social.src}
               alt={social.name}
-              key={social.name}
+             
               width={24}
               height={24}
             />
